@@ -17,7 +17,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::group(['namespace' => 'Product', 'prefix' => 'products'], function() {
+Route::group(['namespace' => 'Product', 'prefix' => 'products', 'middleware' => ['auth']], function() {
     Route::get('/', 'MainController@index')->name('product.index');
     Route::get('/create', 'MainController@create')->name('product.create');
     Route::post('/', 'MainController@store')->name('product.store');

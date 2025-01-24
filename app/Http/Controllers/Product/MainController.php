@@ -7,6 +7,7 @@ use App\Http\Requests\Product\StoreRequest;
 use App\Http\Requests\Product\UpdateRequest;
 use App\Models\Product;
 use App\Services\ProductService;
+use Illuminate\Support\Facades\Gate;
 
 class MainController extends Controller
 {
@@ -54,6 +55,7 @@ class MainController extends Controller
 
     public function update(UpdateRequest $request, Product $product) {
         $data = $request->validated();
+        Gate::authorize('update-article', [$data, $product]);
 
         try {
             $this->service->update($data, $product);
