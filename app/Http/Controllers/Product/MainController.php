@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Product;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\Product\StoreRequest;
 use App\Http\Requests\Product\UpdateRequest;
+use App\Jobs\SendNewProductInfoJob;
 use App\Models\Product;
 use App\Services\ProductService;
 use Illuminate\Support\Facades\Gate;
@@ -37,7 +38,8 @@ class MainController extends Controller
         $data = $request->validated();
 
         try {
-            $this->service->store($data);
+            $product = $this->service->store($data);
+            $this->dispatch(new SendNewProductInfoJob($product));
         } catch (\Exception $exception) {
             return redirect()->back()->with(['msg' => 'При добавлении записи произошла ошибка!']);
             // TO-DO: save messages from $exception to logs.txt

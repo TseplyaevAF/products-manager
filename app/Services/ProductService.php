@@ -40,7 +40,7 @@ class ProductService {
             $data['status'] = $this->getStatusName($data);
             $productData = $this->getProductData($data);
             
-            Product::firstOrCreate([
+            $product = Product::firstOrCreate([
                 'article' => $data['article'],
                 'name' => $data['name'],
                 'status' => $data['status'],
@@ -52,6 +52,7 @@ class ProductService {
             DB::rollBack();
             throw new Exception($exception->getMessage());
         }
+        return $product;
     }
 
     public function update($data, $product) {

@@ -22,5 +22,6 @@ return [
             'code' => 2,
             'title' => 'Администратор',
         ],
-    ]
+    ],
+    'email' => env('EMAIL'),
 ];
