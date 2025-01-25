@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "9d5c3912e0b0eaf7de4cf89c2a741739",
+    "content-hash": "a9e8dcfa60282eccc907ebe33c2e37ad",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -61,6 +61,68 @@
                 "source": "https://github.com/asm89/stack-cors/tree/v2.2.0"
             },
             "time": "2023-11-14T13:51:46+00:00"
+        },
+        {
+            "name": "bencoderus/laravel-webhook",
+            "version": "1.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/bencoderus/laravel-webhook.git",
+                "reference": "b916c2ea194f82ee29cdd5f1d2c2d4876ebf1cfc"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/bencoderus/laravel-webhook/zipball/b916c2ea194f82ee29cdd5f1d2c2d4876ebf1cfc",
+                "reference": "b916c2ea194f82ee29cdd5f1d2c2d4876ebf1cfc",
+                "shasum": ""
+            },
+            "require": {
+                "guzzlehttp/guzzle": "~6|~7",
+                "illuminate/support": "^6.0 || ^7.0 || ^8.0",
+                "php": "^7.3 || ^8.0"
+            },
+            "require-dev": {
+                "orchestra/testbench": "^4.0 || ^5.0 || ^6.0",
+                "phpunit/phpunit": "^9.3"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "aliases": {
+                        "Webhook": "Bencoderus\\Webhook\\WebhookFacade"
+                    },
+                    "providers": [
+                        "Bencoderus\\Webhook\\WebhookServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Bencoderus\\Webhook\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Benjamin Iduwe",
+                    "email": "bencoderus@gmail.com",
+                    "role": "Developer"
+                }
+            ],
+            "description": "The package allows clients/businesses to dispatch webhook to their users.",
+            "homepage": "https://github.com/bencoderus/laravel-webhook",
+            "keywords": [
+                "bencoderus",
+                "webhook"
+            ],
+            "support": {
+                "issues": "https://github.com/bencoderus/laravel-webhook/issues",
+                "source": "https://github.com/bencoderus/laravel-webhook/tree/1.1"
+            },
+            "time": "2021-03-24T13:45:00+00:00"
         },
         {
             "name": "brick/math",
