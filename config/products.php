@@ -24,4 +24,5 @@ return [
         ],
     ],
     'email' => env('EMAIL'),
+    'webhook' => env('WEBHOOK_URL'),
 ];
