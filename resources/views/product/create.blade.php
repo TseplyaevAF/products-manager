@@ -36,31 +36,31 @@
             <div class="col-md-12">
                 <form action="{{ route('product.store') }}" method="POST">
                 @csrf
-                <div class="form-group col-3">
+                <div class="form-group col-md-3">
                     <label>Артикул:</label>
                     <input class="form-control" type="text" name="article" value="{{ old('article') }}">
                     @error('article')
                         <p class="text-danger">{{ $message }}</p>
                     @enderror
                 </div>
-                <div class="form-group col-3">
+                <div class="form-group col-md-3">
                     <label>Название:</label>
                     <input class="form-control" type="text" name="name" value="{{ old('name') }}">
                     @error('name')
                         <p class="text-danger">{{ $message }}</p>
                     @enderror
                 </div>
-                <div class="form-group col-3">
+                <div class="form-group col-md-3">
                     <label>Доступность:</label>
                         <input class="form-control" type="checkbox" name="status"
-                          style="width: 6%;"
+                        style="width: auto;"
                         >
                 </div>
-                <div class="form-group col-3">
+                <div class="form-group col-md-3">
                     <label>Объем видеопамяти (ГБ):</label>
                     <input class="form-control" type="text" name="videoram" value="{{ old('videoram') }}">
                 </div>
-                <div class="form-group col-3">
+                <div class="form-group col-md-3">
                     <label>Тип памяти:</label>
                     <input class="form-control" type="text" name="ram_type" value="{{ old('ram_type') }}">
                 </div>

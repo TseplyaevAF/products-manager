@@ -36,33 +36,33 @@
             <div class="col-md-12">
                 <form action="{{ route('product.update', $product->id) }}" method="POST">
                 @csrf
-                <div class="form-group col-3">
+                <div class="form-group col-md-3">
                     <label>Артикул:</label>
                     <input class="form-control" type="text" name="article" value="{{ $product->article }}">
                     @error('article')
                         <p class="text-danger">{{ $message }}</p>
                     @enderror
                 </div>
-                <div class="form-group col-3">
+                <div class="form-group col-md-3">
                     <label>Название:</label>
                     <input class="form-control" type="text" name="name" value="{{ $product->name }}">
                     @error('name')
                         <p class="text-danger">{{ $message }}</p>
                     @enderror
                 </div>
-                <div class="form-group col-3">
+                <div class="form-group col-md-3">
                     <label>Доступность:</label>
                         <input class="form-control" type="checkbox" name="status"
-                        style="width: 6%;"
+                        style="width: auto;"
                         @if ($product->status) checked @endif>
                 </div>
-                <div class="form-group col-3">
+                <div class="form-group col-md-3">
                     <label>Объем видеопамяти (ГБ):</label>
                     <input class="form-control" type="text" name="videoram" 
                       value="@isset($product->data->videoram){{ $product->data->videoram }}@endisset"
                     >
                 </div>
-                <div class="form-group col-3">
+                <div class="form-group col-md-3">
                     <label>Тип памяти:</label>
                     <input class="form-control" type="text" name="ram_type" 
                       value="@isset($product->data->ram_type){{ $product->data->ram_type }}@endisset"
