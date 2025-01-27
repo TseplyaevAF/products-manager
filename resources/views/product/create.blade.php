@@ -53,7 +53,7 @@
                 <div class="form-group col-md-3">
                     <label>Доступность:</label>
                         <input class="form-control" type="checkbox" name="status"
-                        style="width: auto;"
+                        style="width: 25px;"
                         >
                 </div>
                 <div class="form-group col-md-3">

@@ -46,7 +46,8 @@
           <img src="{{ asset('dist/img/user2-160x160.jpg') }}" class="img-circle elevation-2" alt="User Image">
         </div>
         <div class="info">
-          <a href="#" class="d-block">Username</a>
+          <a href="#" class="d-block">{{ $user->name }}</a>
+          <p style="margin: 0; color:#a5a7ac">Роль: {{ $user->role }}</p>
         </div>
       </div>
 
@@ -54,11 +55,11 @@
       <nav class="mt-2">
         <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
           <li class="nav-item">
-            {{-- <form action="{{ route('logout') }}" method="POST" class="nav-link">
+            <form action="{{ route('logout') }}" method="POST" class="nav-link">
                 @csrf
                 <i style="color: #c2c7d0" class="nav-icon fas fa-sign-out-alt"></i>
                 <input style="padding: 0px 140px 0px 0px; color: #c2c7d0" class="btn" type="submit" value="Выход">
-            </form> --}}
+            </form>
           </li>
           {{-- <li class="nav-header">MULTI LEVEL EXAMPLE</li> --}}
         </ul>

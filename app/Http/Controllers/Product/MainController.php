@@ -52,7 +52,7 @@ class MainController extends Controller
         $statuses = config('products.statuses');
         $product->data = json_decode($product->data);
         $product->status = $statuses[$product->status]['value'];
-        return view('product.edit', compact('product', 'statuses'));
+        return view('product.edit', compact('product'));
     }
 
     public function update(UpdateRequest $request, Product $product) {
